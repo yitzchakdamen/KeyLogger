@@ -1,0 +1,29 @@
+# pythonProject/
+# __pycache__/
+# .idae/
+
+# # קבצים זמניים של מערכות הפעלה
+# .DS_Store
+# Thumbs.db
+
+# # קבצים של עורכי טקסט ו־IDE
+# .vscode/
+# .idea/
+# *.swp
+
+# # קבצי לוג ודיבאג
+# *.log
+# *.tmp
+
+# # קבצים זמניים של Python
+# *.pyc
+# __pycache__/
+
+# # קבצים שנוצרים בעת בנייה (Build)
+# build/
+# dist/
+
+# # קבצים של סביבות וירטואליות ב־Python
+# venv/
+# .env
+
