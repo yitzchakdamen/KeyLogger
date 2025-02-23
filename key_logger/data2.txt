@@ -1,0 +1,48 @@
+2025-02-23 16:22
+['ctrl_l', 'ctrl_l', 'ctrl_l', 'ctrl_l', 'ctrl_l', 'ctrl_l', 'ctrl_l', 'ctrl_l', 'ctrl_l', 'ctrl_l', 'ctrl_l', 'ctrl_l', 'ctrl_l', 'ctrl_l', 'ctrl_l', 'ctrl_l', 'ctrl_l', 'ctrl_l', 'ctrl_l', 'ctrl_l', 'ctrl_l', 'ctrl_l', 'ctrl_l', 'ctrl_l', 'ctrl_l', 'ctrl_l', 'ctrl_l']
+2025-02-23 16:30
+['ctrl_l', 'ctrl_l', 'ctrl_l', 'ctrl_l', 'ctrl_l', 'ctrl_l', 'ctrl_l', 'ctrl_l', 'ctrl_l', 'ctrl_l', 'ctrl_l', 'ctrl_l', 'ctrl_l', 'ctrl_l', 'ctrl_l', 'ctrl_l']
+2025-02-23 16:33
+['backspace', 'backspace', 'ctrl_l', '\x1a', '\x1a', 'ctrl_l', '\x1a', 'backspace', 'backspace', 'backspace', 'backspace', 'backspace', 'backspace']
+2025-02-23 16:34
+['backspace']
+2025-02-23 16:35
+['ctrl_l', '\x18', 'backspace', 'backspace', 'ctrl_l', '\x1a', '\x1a', '\x1a', 'ctrl_l', '\x1a', '\x1a', '\x1a', '\x1a']
+2025-02-23 16:36
+['enter', 'enter', 'f', 'enter', 'd', 'enter', 'backspace', 'backspace', 'backspace', 'backspace', 'backspace', 'backspace', 'backspace', 'backspace', 'd', 'down', 'enter', 'space', 'i']
+2025-02-23 16:37
+['enter', 'ctrl_l', 'ctrl_l', 'space', 'enter', 'w', 'enter', 'space', 'ctrl_l', 'caps_lock', 'd', 'caps_lock', 'enter', 'shift_r', '(', 'right', 'space', 'a', 's', 'space', 'ctrl_l', '\x03', 'ctrl_l', '\x16', 'left', 'left', 'left', 'left', 'shift_r', '_', 'right', 'right', 'left', 'backspace', 'b', 'left', 'left', 'left', 'left', 'left', 'backspace', 'd', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'shift_r', ':', 'enter', 'd', 'enter', '.', 'enter', 'f', 'enter', '\\', 'backspace', 'backspace', 'backspace']
+2025-02-23 16:38
+['enter', 'backspace', 'backspace', 'backspace', 'enter', 'backspace', 'enter', 'backspace', 'w', 'enter', 'space', 'o', 'enter']
+2025-02-23 16:39
+['ctrl_l', '\x03', 'ctrl_l', '\x16', None, 'right', 'right', 'right', 'right', 'right', 'space', 'shift_r', '"', 'backspace', 'backspace', ',', 'space', 'shift_r', 'w', 'right', 'right', 'space', 'a', 's', 'space', 'f', 'shift_r', 'enter', 'ctrl_l', '\x03', 'ctrl_l', '\x16', 'f', '.', 'down', 'down', 'down', 'enter', 'l', 'down', 'enter']
+2025-02-23 16:40
+['ctrl_l', '\x03', 'ctrl_l', '\x16']
+2025-02-23 16:41
+['shift_r', 'left', 'left', 'f', 'right', 'shift_r', 'right', 'right', 'right', 'right', 'shift_r', '{', 'right', 'right', 'n', 'backspace', '\\', 'n', '\\', 'n', 'backspace', 'backspace', '/', 'n', 'backspace', 'backspace', 'n', '\\', 'backspace', 'backspace', 'k', 'k', '\\', 'n', 'left', 'left', 'backspace', 'backspace']
+2025-02-23 16:42
+['ctrl_l', '\x01', 'backspace', 'enter', 'p', 'enter', 'shift_r', '=', '=', '=', '=', '=']
+2025-02-23 16:43
+['backspace', 'backspace', 'ctrl_l', 'backspace', 'backspace', 'backspace', 'shift_r', 'right', 'right', 'right', 'left', 'shift_r', 'left', 'left', 'left', 'shift_r', 'left', 'left', 'f', 'right', 'right', 'right', 'right', '\\', 'n']
+2025-02-23 16:44
+['ctrl_l', '\x03', 'ctrl_l', '\x16', 'backspace', 'backspace', 'enter', 's', 'enter', '.', 'down', 'down', 'down', 'down', 'down', 'down', 'down', 'down', 'down', 'enter']
+2025-02-23 16:45
+['.', 'down', 'enter', 'shift_r', 'd', 'a', 't', 'a', '.', 't', 'x', 't', 'enter', 'd', '.', 'down', 'down', 'down', 'down', 'enter', None]
+2025-02-23 16:46
+['backspace', 'backspace', 'backspace', 'backspace', 'backspace', 'ctrl_l', '\x1a', 'shift_r', 'left', 'left', 'right', 'left', 'left', 'shift_r', 'right', 'right', 'right', 'backspace']
+2025-02-23 16:47
+['space', 'space', 'ctrl_l', '\x1a', '\x1a', '\x1a', '\x1a', '\x1a', 'down', 'down', 'down', 'down', 'down', 'down', 'down', 'down', 'down', 'down', 'down', 'down', 'down', 'down', 'down', 'down', 'down', 'down', 'down', 'down', 'down', 'down', 'down', 'down', 'down']
+2025-02-23 16:48
+['enter', 'p', 'enter', 'd', 'down', 'enter', 'backspace', 'backspace', 'backspace', 'backspace', 'backspace', 'ctrl_l', '\x18', 'backspace', 'backspace', 'right', 'right', 'right', 'right', 'right', 'right', 'right', ',', 'space', 'ctrl_l', '\x16']
+2025-02-23 16:49
+['enter', 'd', '.', 'down', 'up', 'enter', 'm', 'enter', None, None, 'backspace', 'backspace', None, None, 'ctrl_l', None]
+2025-02-23 16:50
+['enter', 'backspace', 'backspace', 'd', 'backspace', 'backspace', 'backspace', 'backspace', 'enter', 'd', '.', 'down', 'down', 'down', 'down', 'down', 'enter']
+2025-02-23 16:51
+['ctrl_l', '\x03', 'enter', 'ctrl_l', '\x16', 'backspace', 'tab']
+2025-02-23 16:52
+['ctrl_l']
+2025-02-23 16:53
+['d', 'n', 'b', 'h', 'enter', 'alt_l', 'caps_lock', 'shift', 'caps_lock', 'alt_l', 'shift', 'd', 'n', 'b', 'h', 'enter', 'ctrl_l', '\x16', 'n', 'v', 'space', 't', ',', 'v', 'space', 'n', 'n', 'k', 'h', '.', 'enter']
+2025-02-23 16:54
+['ctrl_l', '\x03', 'v', 'a', ',', 'n', 'n', 'a', 'h', 'space', 'backspace', 'backspace', 'backspace', 'backspace', 'backspace', 'backspace', 'backspace', 'backspace', 'backspace', 'v', 'a', ',', 'n', 'a', ',', 'h', 'space', 'g', 'l', 'backspace', 'o', 'space', 'z', 'v', 'space', 'ctrl_l', '\x16', 'enter']
