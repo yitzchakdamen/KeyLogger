@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ניהול קבצים</title>
+</head>
+<body>
+
+    <h2>קבלת מידע</h2>
+    <form action="http://localhost:5000/get_data" method="get">
+        <label for="computer_name_query">שם מחשב:</label>
+        <input type="text" name="computer_name_device_id" id="computer_name_query">
+        <br><br>
+        <label for="year">שנה:</label>
+        <input type="number" name="year" id="year">
+        <br><br>
+        <label for="month">חודש:</label>
+        <input type="number" name="month" id="month">
+        <br><br>
+        <button type="submit">קבל מידע</button>
+    </form>
+</body>
+</html>

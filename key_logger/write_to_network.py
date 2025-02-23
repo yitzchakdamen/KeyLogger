@@ -18,16 +18,18 @@ class NetworkWriter(IWriter):
             with open(IWriter.file_path, 'rb') as file:
                 #  יוצר מבנה מיוחד שמתאים לשליחת קבצים
                 files = {'file': file}
+                data = {"computer_name_device_id": machine_name}
 
                 # שליחת הבקשה לשרת
                 response = requests.post(self.path ,
                                          files=files,
-                                         json={"computer_name_&_device_id": machine_name})
+                                         data=data)
 
                 # בדיקה האם הבקשה הצליחה
                 if response.status_code == 200:
                     print(response.json())
                 else:
+                    print(response.text)
                     print({'error': 'שגיאה בשליחת הקובץ'})
 
         except FileNotFoundError:
@@ -36,5 +38,6 @@ class NetworkWriter(IWriter):
             print({'error': f'שגיאה: {str(e)}'})
 
 if __name__ == '__main__':
-    response = NetworkWriter().send_data()
+    # response = NetworkWriter().send_data(machine_name="qaqsa_55478844")
+    response = NetworkWriter().send_data(machine_name="zzz")
     print(response)
