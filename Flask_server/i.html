@@ -1,0 +1,102 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+    <title>התחברות</title>
+</head>
+<body>
+    <h1>התחברות</h1>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    <form method="POST">
+        <p>שם משתמש: <input type="text" name="username"></p>
+        <p>סיסמא: <input type="password" name="password"></p>
+        <p><input type="submit" value="התחבר"></p>
+    </form>
+    <p>עדיין לא רשום? <a href="{{ url_for('register') }}">הירשם כאן</a></p>
+</body>
+</html>
+
+<!-- register.html -->
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+    <title>הרשמה</title>
+</head>
+<body>
+    <h1>הרשמה</h1>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    <form method="POST">
+        <p>שם משתמש: <input type="text" name="username"></p>
+        <p>סיסמא: <input type="password" name="password"></p>
+        <p><input type="submit" value="הירשם"></p>
+    </form>
+</body>
+</html>
+
+<!-- upload.html -->
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+    <title>טעינת קובץ</title>
+</head>
+<body>
+    <h1>טעינת קובץ</h1>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    <form method="POST" enctype="multipart/form-data">
+        <p><input type="file" name="file"></p>
+        <p><input type="submit" value="טען קובץ"></p>
+    </form>
+</body>
+</html>
+
+<!-- events.html -->
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+    <title>אירועים</title>
+</head>
+<body>
+    <h1>אירועים</h1>
+    <table border="1">
+        <tr>
+            <th>מזהה</th>
+            <th>תיאור</th>
+            <th>תאריך</th>
+        </tr>
+        {% for event in events %}
+        <tr>
+            <td>{{ event[0] }}</td>
+            <td>{{ event[1] }}</td>
+            <td>{{ event[2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

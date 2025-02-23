@@ -3,6 +3,7 @@ import os
 from werkzeug.utils import secure_filename
 from data_base import DataBase
 
+
 app = Flask(__name__)
 
 # תיקיית זמנית לקבצים
@@ -22,12 +23,9 @@ def upload_file():
 
     file = request.files['file']
 
-    # בדיקה האם הקובץ ריק
-    if file.filename == '':
+    if file.filename == '': # בדיקה האם הקובץ ריק
         return jsonify({'error': 'שם הקובץ ריק'}), 400
-
-    # בדיקה שזה קובץ TXT
-    if not file.filename.endswith('.txt'):
+    elif not file.filename.endswith('.txt'): # בדיקה שזה קובץ TXT
         return jsonify({'error': 'רק קבצי TXT מותרים'}), 400
 
     # שמירת הקובץ בצורה בטוחה
@@ -91,7 +89,4 @@ def send_to_kolmer(content):
 # הפעלת השרת
 if __name__ == '__main__':
     # הפעלת השרת במצב פיתוח
-    app.run(debug=True)
-
-if __name__ == '__main__':
     app.run(debug=True)

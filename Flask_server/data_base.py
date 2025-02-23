@@ -1,5 +1,6 @@
 from datetime import datetime
 import sqlite3
+from Encryptor import Encryptor
 
 
 class DataBase:
@@ -129,7 +130,9 @@ class DataBase:
         הצגת אירועים לפי תנאי תאריך וזמן
         """
         for event in self.get_events_by_date(year, month, day, hour, minute):
-            print(f"מזהה: {event[0]}, תיאור: {event[1]}, תאריך: {event[2]}")
+            # print(f"מזהה {event[0]}, תיאור: {event[1]}, תאריך: {event[2]}")
+            print(f" {event[0]} |  {event[2]}, | {event[1]}")
+            return event[1]
 
     def read_file_and_import(self, filename):
         """
@@ -140,8 +143,7 @@ class DataBase:
         תאריך (שורה שלישית)
         תוכן (שורה רביעית)
         וכו'
-        with DataBase() as data_base:
-            data_base.read_file_and_import(file_path)
+
         """
         with open(filename, 'r', encoding='utf-8') as file:
             lines = file.readlines()
@@ -152,8 +154,8 @@ class DataBase:
             # הוספת האירועים למסד הנתונים
             for i in range(0, len(lines), 2):
                 if i + 1 < len(lines):  # בדיקה שיש זוג שורות
-                    date = lines[i].strip()
-                    content = lines[i + 1]
+                    date = Encryptor.decrypt_text(lines[i])
+                    content = Encryptor.decrypt_text(lines[i + 1])
                     self.add_event(content, date)
 
 
@@ -162,8 +164,11 @@ class DataBase:
 if __name__ == '__main__':
     # יצירת קישור למסד הנתונים
     with DataBase() as d:
-        d.delete_events_by_date()
-        d.read_file_and_import("data2.txt")
+        # d.delete_events_by_date()
+        # d.read_file_and_import("data2.txt")
         # d.retrieval_from_database()
-        d.retrieval_from_database(minute=42)
+        c = d.retrieval_from_database(minute=42)
+        print(c)
+        print(type(c))
+        # d.delete_events_by_date()
 
