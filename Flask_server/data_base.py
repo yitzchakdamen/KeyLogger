@@ -142,7 +142,6 @@ class DataBase:
 
         for event in self.get_events_by_date(year, month, day, hour, minute, machine_name):
             print(f" {event[0]}  |  {event[3]}  |  {event[2]}  |  {event[1]}")
-
         return self.get_events_by_date(year, month, day, hour, minute, machine_name)
 
     def read_file_and_import(self, filename, machine_name):
@@ -154,7 +153,6 @@ class DataBase:
         תאריך (שורה שלישית)
         תוכן (שורה רביעית)
         וכו'
-
         """
         with open(filename, 'r', encoding='utf-8') as file:
             lines = file.readlines()
@@ -178,9 +176,12 @@ if __name__ == '__main__':
         # d.delete_events_by_date()
         # d.read_file_and_import("data2.txt")
         # d.retrieval_from_database()
-        d.delete_events_by_date(machine_name="zzz")
-        c = d.retrieval_from_database()
-        # print(c)
+        # d.delete_events_by_date(machine_name="zzz")
+        c = d.retrieval_from_database(minute=42)
+        print(c)
+        # from KeyboardParser import KeyboardParser
+        # for i in c:
+        #     # print(i)
+        #     print(KeyboardParser(i[1]).format_as_text())
 
-        # d.delete_events_by_date()
 

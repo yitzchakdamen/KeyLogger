@@ -3,9 +3,11 @@ import os
 from werkzeug.utils import secure_filename
 from data_base import DataBase
 from KeyboardParser import KeyboardParser
+from flask_cors import CORS
 
 
 app = Flask(__name__)
+CORS(app)  # מאפשר לכל המקורות לגשת ל-API
 
 # תיקיית זמנית לקבצים
 UPLOAD_FOLDER = 'temp_uploads'
@@ -55,15 +57,36 @@ def get_data():
     machine_name = request.args.get("computer_name_device_id")
     year = request.args.get("year")
     month = request.args.get("month")
+    day = request.args.get("day")
+    hour = request.args.get("hour")
+    minute = request.args.get("minute")
 
-    print(f'Received: machine_name={machine_name}, year={year}, month={month}')
+    print(f'Received: {machine_name}, {year}, {month}, {day}, {hour}, {minute}')
 
     with DataBase() as data_base:
-        text_input = data_base.retrieval_from_database(machine_name=machine_name,year=year,month=month)
+        data = data_base.retrieval_from_database(year=year, month=month, day=day, hour=hour, minute=minute, machine_name=machine_name)
 
-    # data = KeyboardParser().parse_text_input(text_input)
+    events = [{"machine_name":event[3],"date":event[2], "data":KeyboardParser(event[1]).format_as_text()} for event in data]
+    return jsonify(events)
 
-    return jsonify(text_input)
+@app.route('/delete_data', methods=['GET'])
+def delete_data():
+    """
+    :return:
+    """
+    machine_name = request.args.get("computer_name_device_id")
+    year = request.args.get("year")
+    month = request.args.get("month")
+    day = request.args.get("day")
+    hour = request.args.get("hour")
+    minute = request.args.get("minute")
+
+    print(f'Received: {machine_name}, {year}, {month}, {day}, {hour}, {minute}')
+
+    with DataBase() as data_base:
+        data = data_base.delete_events_by_date(year=year, month=month, day=day, hour=hour, minute=minute, machine_name=machine_name)
+
+    return jsonify(f"נמחקו {data} אירועים ")
 
 
 # הפעלת השרת
