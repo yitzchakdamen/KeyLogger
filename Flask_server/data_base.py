@@ -144,6 +144,38 @@ class DataBase:
             print(f" {event[0]}  |  {event[3]}  |  {event[2]}  |  {event[1]}")
         return self.get_events_by_date(year, month, day, hour, minute, machine_name)
 
+    import requests
+
+def tracking_info(self):
+    """
+    שליחת מידע על כמות המחשבים המחוברים, תאריך תחילת המעקב וכמות המידע על כל מחשב לשרת
+    """
+    # קבלת רשימת כל המחשבים הייחודיים במסד הנתונים
+    self.cursor.execute("SELECT DISTINCT machine_name FROM events")
+    machines = self.cursor.fetchall()
+    
+    num_machines = len(machines)
+    
+    # קבלת תאריך תחילת המעקב
+    self.cursor.execute("SELECT MIN(event_date) FROM events")
+    start_date = self.cursor.fetchone()[0]
+    
+    # קבלת כמות המידע לכל מחשב
+    machine_data = {}
+    for machine in machines:
+        machine_name = machine[0]
+        self.cursor.execute("SELECT COUNT(*) FROM events WHERE machine_name = ?", (machine_name,))
+        event_count = self.cursor.fetchone()[0]
+        machine_data[machine_name] = event_count
+
+    
+    data = {
+        "num_machines": num_machines,
+        "start_date": start_date,
+        "machine_data": machine_data
+    }
+    return data
+
     def read_file_and_import(self, filename, machine_name):
         """
         קריאת קובץ טקסט והעברת התוכן למסד הנתונים
